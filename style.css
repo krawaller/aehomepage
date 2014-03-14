@@ -1,0 +1,17 @@
+#wrapper {
+	max-width: 700px;
+	padding: 1em;
+	margin: 0 auto;
+}
+
+.appstorebadge {
+	height: 60px;
+}
+
+.logo {
+	height: 200px;
+}
+
+img {
+	margin: 1em 5em;
+}
