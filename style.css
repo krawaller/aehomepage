@@ -1,12 +1,11 @@
 .flag {
 	position: absolute;
-	height: 20px;
+	height: 35px;
 	right: 3em;
+	display: none;
 }
-
-.sv {right: 6em;}
-.sv .sv {height: 30px;}
-.en .en {height: 30px;}
+.sv .en {display: block;}
+.en .sv {display: block;}
 
 #wrapper {
 	position: relative;
@@ -30,4 +29,10 @@
 	position: absolute;
 	right: 0;
 	bottom: 0;
+}
+
+.container {
+	max-width: 1100px;
+	position: relative;
+	margin: 0 auto;
 }

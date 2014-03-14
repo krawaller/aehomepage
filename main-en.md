@@ -1,4 +1,4 @@
-Welcome to **Algebra Explorer**, the symbolic calculator app that will also help you eplore algebra!
+Welcome to **Algebra Explorer**, the symbolic calculator app for iOS that will also help you eplore algebra!
 
 It features:
 
@@ -11,4 +11,6 @@ It features:
 *    A course of over 30 lessons to walk through the contents of the app
 *    Explanatory texts in the app total over 40000 words, equivalent to a 160 page novel!
 *    No server communications necessary, the app contains the full computing power
+*    Universal, supports both iPhone and iPad
+*    Interface adapts after orientation
 *    No in-app purchase now or ever, you get the full power of the app
