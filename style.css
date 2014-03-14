@@ -9,10 +9,9 @@
 .en .en {height: 30px;}
 
 #wrapper {
-	max-width: 700px;
-	padding: 1em;
-	margin: 0 auto;
 	position: relative;
+	margin-left: 1em;
+	margin-right: 500px;
 }
 
 .appstorebadge {
@@ -23,6 +22,12 @@
 	height: 200px;
 }
 
-img {
+.logo, .appstorebadge {
 	margin: 1em 5em;
+}
+
+#gallery {
+	position: absolute;
+	right: 0;
+	bottom: 0;
 }

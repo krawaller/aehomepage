@@ -6,9 +6,13 @@
 	<link rel="stylesheet" href="style.css" type="text/css"></link>
 	<meta http-equiv="content-type" content="text/html; charset=utf-8">
 </head>
-<body class='sv'><div id="wrapper">
+<body class='sv'>
+<div id='gallery'><div></div></div>
+
 <a class='flaglink' href='index-se.html'><img class='flag sv' src="img/se.svg" /></a>
 <a class='flaglink' href='index.html'><img class='flag en' src="img/gb.svg" /></a>
+
+<div id="wrapper">
 <p><img class='logo' src="img/logo-big.png" /></p>
 
 
@@ -31,6 +35,22 @@
 </ul>
 
 
-<p><img class='appstorebadge' src="img/app-store-badge.png" alt="app store" /></p>
+<script src='js/jquery.js'></script>
+<script src='js/jquery.slideshow.js'></script>
+<script type='text/javascript'>
+var lang = $("body").attr("class");
+$('#gallery > div').iPhoneSlideshow({
+  iphoneImage: 'img/iphone.png',
+  glossImage: 'img/gloss.png',
+  screens : [
+    'img/screenshots-'+lang+'/entry.png',
+    'img/screenshots-'+lang+'/result.png',
+    'img/screenshots-'+lang+'/resultstep.png',
+    'img/screenshots-'+lang+'/glossary.png',
+    'img/screenshots-'+lang+'/lesson.png',
+    'img/screenshots-'+lang+'/operations.png'
+  ]
+});
+</script>
 </div></body>
 </html>
