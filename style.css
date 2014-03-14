@@ -1,7 +1,18 @@
+.flag {
+	position: absolute;
+	height: 20px;
+	right: 3em;
+}
+
+.sv {right: 6em;}
+.sv .sv {height: 30px;}
+.en .en {height: 30px;}
+
 #wrapper {
 	max-width: 700px;
 	padding: 1em;
 	margin: 0 auto;
+	position: relative;
 }
 
 .appstorebadge {
