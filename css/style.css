@@ -40,3 +40,11 @@
 .customfbcontainer{
 	margin-bottom: 1em;
 }
+
+dt {
+	float: left;
+	clear: left;
+	font-weight: bold;
+	margin-right: 1em;
+	margin-left: 1em;
+}
