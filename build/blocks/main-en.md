@@ -1,6 +1,6 @@
 Welcome to **Algebra Explorer**, the symbolic calculator app for iOS that will also help you eplore algebra!
 
-It features:
+## Features
 
 *    Full algebraic simplification of the expression you enter
 *    Decimal representation where applicable
@@ -14,3 +14,7 @@ It features:
 *    Universal, supports both iPhone and iPad
 *    Interface adapts after orientation
 *    No in-app purchase now or ever, you get the full power of the app
+
+## Updates
+
+$UPDATES

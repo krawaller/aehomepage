@@ -6,17 +6,26 @@
 	<link rel="stylesheet" href="css/style.css" type="text/css"></link>
 	<meta http-equiv="content-type" content="text/html; charset=utf-8">
 </head>
-<body class='sv'><div class='container'>
-<div id='gallery'><div></div></div>
+<body class='sv'>
 
-<a class='flaglink' href='index-se.html'><img class='flag sv' src="img/se.svg" /></a>
-<a class='flaglink' href='index.html'><img class='flag en' src="img/gb.svg" /></a>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "http://connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 
-<div id="wrapper">
+<div class='container'>
+  <a class='flaglink' href='index-se.html'><img class='flag sv' src="img/se.svg" /></a>
+  <a class='flaglink' href='index.html'><img class='flag en' src="img/gb.svg" /></a>
+  <div id="wrapper">
+
 <p><img class='logo' src="img/logo-big.png" /></p>
 
 <p>Välkommen till <strong>Algebra Explorer</strong>, den symbolhanterande räknarappen för iOS som också hjälper dig utforska algebra!</p>
-<p>Funktionalitet:</p>
+<h2 id="funktionalitet">Funktionalitet</h2>
 <ul>
 <li>Allt innehåll på svenska och engelska</li>
 <li>Algebraisk förenkling av uttryck du skriver in</li>
@@ -32,14 +41,26 @@
 <li>Gränssnitt anpassar sig efter orientering</li>
 <li>Inga tillköp finns i appen nu eller i framtiden, ditt engångsköp ger dig hela innehållet</li>
 </ul>
+<h2 id="uppdateringar">Uppdateringar</h2>
+<p><dl><dt>1.0.1</dt><dd>Hastighetsuppgradering för förenklingsprocessen</dd><dt>1.0.0</dt><dd>Releaseversion för App Store</dd></dl></p>
 
 
 <p><img class='appstorebadge' src="img/app-store-badge.png" alt="app store" /></p>
 
+<div class='customfbcontainer'>
+  <div class="fb-like" data-href="https://www.facebook.com/algebraexplorer" data-layout="standard" data-action="like" data-show-faces="false" data-share="false"></div>
+</div>
+
+  </div>
+</div>
+
+<div id='gallery'><div></div></div>
+
 <script src='js/jquery.js'></script>
 <script src='js/jquery.slideshow.js'></script>
-<script type='text/javascript'>
+<script>
 var lang = $("body").attr("class");
+console.log("My stuff");
 $('#gallery > div').iPhoneSlideshow({
   iphoneImage: 'img/iphone.png',
   glossImage: 'img/gloss.png',
@@ -53,5 +74,4 @@ $('#gallery > div').iPhoneSlideshow({
   ]
 });
 </script>
-</div></div></body>
-</html>
+</body></html>

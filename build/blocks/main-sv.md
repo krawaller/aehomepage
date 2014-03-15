@@ -1,6 +1,6 @@
 Välkommen till **Algebra Explorer**, den symbolhanterande räknarappen för iOS som också hjälper dig utforska algebra!
 
-Funktionalitet:
+##Funktionalitet
 
 *    Allt innehåll på svenska och engelska
 *    Algebraisk förenkling av uttryck du skriver in
@@ -16,3 +16,6 @@ Funktionalitet:
 *    Gränssnitt anpassar sig efter orientering
 *    Inga tillköp finns i appen nu eller i framtiden, ditt engångsköp ger dig hela innehållet
 
+##Uppdateringar
+
+$UPDATES
