@@ -1,1 +1,0 @@
-marked parser: https://www.npmjs.org/package/marked
