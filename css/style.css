@@ -14,14 +14,16 @@
 }
 
 .appstorebadge {
-	height: 60px;
+	height: 40px;
+	position: fixed;
+	right: 8em;
 }
 
 .logo {
-	height: 200px;
+	height: 130px;
 }
 
-.logo, .appstorebadge {
+.logo {
 	margin: 1em 5em;
 }
 
