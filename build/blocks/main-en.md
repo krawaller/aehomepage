@@ -5,6 +5,7 @@ Welcome to **Algebra Explorer**, the symbolic calculator app for iOS that will a
 *    Full algebraic simplification of the expression you enter
 *    Decimal representation where applicable
 *    Custom-built parser tailor-made for the app making it easy to enter expressions
+*    $TYPES different types of expressions supported
 *    Disclosure of every substep in the calculations
 *    $OPERATIONS operations, each with its own in-depth presentation
 *    An integrated vocabulary of $WORDS word definitions

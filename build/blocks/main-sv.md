@@ -6,6 +6,7 @@ Välkommen till **Algebra Explorer**, den symbolhanterande räknarappen för iOS
 *    Algebraisk förenkling av uttryck du skriver in
 *    Decimalformsrepresentation
 *    Specialbyggd tolkare skräddarsydd för appen gör det enkelt att mata in uttryck
+*    $TYPES olika sorters uttryck stödjs
 *    Redovisning av varje delsteg i uträkningarna
 *    $OPERATIONS operationer, var och en med ingående presentation
 *    En integrerad ordlista med $WORDS ord

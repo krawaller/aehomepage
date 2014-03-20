@@ -18,6 +18,7 @@ fs.readFile("blocks/skeleton.html",function(err,skeleton){
 				"$LESSONS":count.lessons,
 				"$WORDS":count.words,
 				"$TEXTWORDS":count[lang].total,
+				"$TYPES":count.types,
 				"$PAGES": Math.floor(count[lang].total/2500)*10,
 				"$UPDATES": _.reduce(info.changelog,function(str,update,version){
 					return str+="<dt>"+version+"</dt><dd>"+update[lang]+"</dd>";
