@@ -1,10 +1,10 @@
-Welcome to **Algebra Explorer**, the symbolic calculator app for iOS that will also help you eplore algebra!
+Welcome to **Algebra Explorer**, the symbolic calculator app for iOS that will also help you explore algebra!
 
-## Features
+##Features
 
 *    Full algebraic simplification of the expression you enter
 *    Decimal representation where applicable
-*    Custom-built parser tailor-made for the app making it easy to enter expressions
+*    Custom parser tailored specifically for the app makes it easy to enter expressions
 *    $TYPES different types of expressions supported
 *    Disclosure of every substep in the calculations
 *    $OPERATIONS operations, each with its own in-depth presentation
@@ -15,6 +15,7 @@ Welcome to **Algebra Explorer**, the symbolic calculator app for iOS that will a
 *    Universal, supports both iPhone and iPad
 *    Interface adapts after orientation
 *    No in-app purchase now or ever, you get the full power of the app
+*    Big punch in a small package; app is only 25MB
 
 ## Updates
 

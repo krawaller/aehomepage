@@ -278,6 +278,7 @@ body {
   line-height: 1.42857143;
   color: #333;
   background-color: #fff;
+  -webkit-font-smoothing: antialiased;
 }
 input,
 button,
@@ -362,10 +363,10 @@ h6,
 .h4,
 .h5,
 .h6 {
-  font-family: inherit;
-  font-weight: 500;
+  color: #181818;
+  font-family: "HelveticaNeue-Thin", "Helvetica", sans-serif;
+  font-weight: normal;
   line-height: 1.1;
-  color: inherit;
 }
 h1 small,
 h2 small,

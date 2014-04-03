@@ -1,36 +1,19 @@
 .flag {
-	position: fixed;
 	height: 35px;
-	right: 3em;
 	display: none;
+	margin-right: 1em;
 }
 .sv .en {display: block;}
 .en .sv {display: block;}
 
-#wrapper {
-	position: relative;
-	margin-left: 1em;
-	margin-right: 500px;
-}
-
 .appstorebadge {
 	height: 40px;
-	position: fixed;
-	right: 8em;
+	margin-right: 12px;
 }
 
 .logo {
 	height: 130px;
-}
-
-.logo {
-	margin: 1em 5em;
-}
-
-#gallery {
-	position: fixed;
-	right: 0;
-	bottom: 0;
+	margin: 20px;
 }
 
 .container {
@@ -49,4 +32,12 @@ dt {
 	font-weight: bold;
 	margin-right: 1em;
 	margin-left: 1em;
+}
+
+.gallery {
+	text-align: right;
+}
+
+.gallery > div {
+	display: inline-block;
 }
