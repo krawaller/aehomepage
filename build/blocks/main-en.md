@@ -15,7 +15,7 @@ Welcome to **Algebra Explorer**, the symbolic calculator app for iOS that will a
 *    Universal, supports both iPhone and iPad
 *    Interface adapts after orientation
 *    No in-app purchase now or ever, you get the full power of the app
-*    Big punch in a small package; app is only 25MB
+*    Big punch in a small package; app is less than 15MB
 
 ## Updates
 

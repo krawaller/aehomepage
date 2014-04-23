@@ -16,7 +16,7 @@ Välkommen till **Algebra Explorer**, den symbolhanterande räknarappen för iOS
 *    Universalapp stödjer både iPhone och iPad
 *    Gränssnitt anpassar sig efter orientering
 *    Inga tillköp finns i appen nu eller i framtiden, ditt engångsköp ger dig hela innehållet
-*    Stor kraft i litet paket; appen är endast 25MB
+*    Stor kraft i litet paket; appen är mindre än 15MB
 
 ##Uppdateringar
 
