@@ -21,6 +21,6 @@ Welcome to **Algebra Explorer**, the symbolic calculator app for iOS that will a
 
 $UPDATES
 
-##Contakt
+##Contact
 
 For questions or feedback, [visit us on Facebook](http://facebook.com/algebraexplorer) or [send an email](mailto:david@krawaller.se)!
