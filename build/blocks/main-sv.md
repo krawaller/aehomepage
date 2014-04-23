@@ -21,3 +21,7 @@ Välkommen till **Algebra Explorer**, den symbolhanterande räknarappen för iOS
 ##Uppdateringar
 
 $UPDATES
+
+##Kontakt
+
+För frågor eller feedback, [besök oss på Facebook](http://facebook.com/algebraexplorer) eller [skicka ett mail](mailto:david@krawaller.se)!

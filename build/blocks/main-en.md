@@ -20,3 +20,7 @@ Welcome to **Algebra Explorer**, the symbolic calculator app for iOS that will a
 ## Updates
 
 $UPDATES
+
+##Kontakt
+
+For questions or feedback, [visit us on Facebook](http://facebook.com/algebraexplorer) or [send an email](mailto:david@krawaller.se)!

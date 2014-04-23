@@ -14,6 +14,10 @@ fs.readFile("blocks/skeleton.html",function(err,skeleton){
 		fs.readFile("blocks/main-"+lang+".md", 'utf8', function(err,content){
 			var replace = _.extend({
 				"$BODYCLASS":lang,
+				"$APPSTOREHREF": {
+					en: "https://itunes.apple.com/us/app/algebra-explorer/id850375056?mt=8&uo=4",
+					sv: "https://itunes.apple.com/se/app/algebra-explorer/id850375056?mt=8&uo=4"
+				}[lang],
 				"$CONTENT":marked(content),
 				"$OPERATIONS":count.ops,
 				"$LESSONS":count.lessons,
