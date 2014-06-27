@@ -26,8 +26,8 @@
     <div class='clearfix'>
       <h1>
         Algebra Explorer
-          <a class='flaglink' href='index-se.html'><img class='flag sv pull-right' src="img/se.svg" /></a>
-          <a class='flaglink' href='index.html'><img class='flag en pull-right' src="img/gb.svg" /></a>
+          <a class='flaglink' href='index-se.html'><img class='flag sv pull-right' src="img/se.png" /></a>
+          <a class='flaglink' href='index.html'><img class='flag en pull-right' src="img/gb.png" /></a>
           <a href='https://itunes.apple.com/us/app/algebra-explorer/id850375056?mt=8&uo=4' target='_blank'><img class='appstorebadge pull-right' src="img/app-store-badge.png" alt="app store" /></a>
       </h1>
       <h4>The love child between a math text book and a symbolic calculator</h4>
@@ -35,7 +35,9 @@
   </header>
   <div class='row'>
     <div class='col-md-6'>
-<p>Welcome to <strong>Algebra Explorer</strong>, the symbolic calculator app for iOS that will also help you explore algebra!</p>
+<p>Welcome to <strong>Algebra Explorer</strong>, the symbolic calculator app for iOS that will also help you explore algebra! To try out the app right here in your browser, just click the button below! Requires a modern browser.</p>
+<button type='button' class='btn btn-default launchbutton'>Launch demo!</button>
+
 <h2 id="features">Features</h2>
 <ul>
 <li>Full algebraic simplification of the expression you enter</li>
@@ -46,15 +48,13 @@
 <li>329 operations, each with its own in-depth presentation</li>
 <li>An integrated vocabulary of 146 word definitions</li>
 <li>A course of 56 lessons to walk through the contents of the app</li>
-<li>Explanatory texts in the app total 48678 words, equivalent to a 190 page novel!</li>
+<li>Explanatory texts in the app total 48709 words, equivalent to a 190 page novel!</li>
 <li>No server communications necessary, the app contains the full computing power</li>
 <li>Universal, supports both iPhone and iPad</li>
 <li>Interface adapts after orientation</li>
 <li>No in-app purchase now or ever, you get the full power of the app</li>
 <li>Big punch in a small package; app is less than 15MB</li>
 </ul>
-<h2 id="updates">Updates</h2>
-<p><dl><dt>1.2</dt><dd>Adjustments to allow deployment on the Swedish prison education platform. And for the law-abiding citizens, this version adds the much requested state export function!</dd><dt>1.1.1</dt><dd>Lots of bug and typo fixes. Thank you for all the reports!</dd><dt>1.1</dt><dd>Major refactoring of calculator interface. Many new operations. Improved equation solving. Corrected many typos and bugs.</dd><dt>1.0.7</dt><dd>Four new operations for simplifying logarithms. Many improved explanations. UI improvements. Fixed minor typos and bugs.</dd><dt>1.0.6</dt><dd>Improved math rendering. More prominent navigation UI. Rephrased several descriptions. Fixed minor typos.</dd><dt>1.0.5</dt><dd>Improved lesson structure. New logic operations. Click view headlines to scroll to top. Calculator link in closeup view. New dictionary entries. New operation to move negation between sides in relation. Typos and bugfixes.</dd><dt>1.0.4</dt><dd>Release version for App Store</dd></dl></p>
 <h2 id="contact">Contact</h2>
 <p>For questions or feedback, <a href="http://facebook.com/algebraexplorer">visit us on Facebook</a> or <a href="mailto:david@krawaller.se">send an email</a>!</p>
 
@@ -71,18 +71,38 @@
 <script src='js/jquery.js'></script>
 <script src='js/jquery.slideshow.js'></script>
 <script>
-var lang = $("body").attr("class");
-console.log("My stuff");
-$('.gallery > div').iPhoneSlideshow({
-  iphoneImage: 'img/iphone.png',
-  glossImage: 'img/gloss.png',
-  screens : [
-    'img/screenshots-'+lang+'/entry.png',
-    'img/screenshots-'+lang+'/resultstep.png',
-    'img/screenshots-'+lang+'/glossary.png',
-    'img/screenshots-'+lang+'/oplearn.png',
-    'img/screenshots-'+lang+'/closeup.png'
-  ]
-});
+  var lang = $("body").attr("class");
+  $('.gallery > div').iPhoneSlideshow({
+    iphoneImage: 'img/iphone.png',
+    glossImage: 'img/gloss.png',
+    screens : [
+      'img/screenshots-'+lang+'/entry.png',
+      'img/screenshots-'+lang+'/resultstep.png',
+      'img/screenshots-'+lang+'/glossary.png',
+      'img/screenshots-'+lang+'/oplearn.png',
+      'img/screenshots-'+lang+'/closeup.png'
+    ]
+  });
+  $(".launchbutton").on("click",function(e){
+    var alldims = {
+        iphone: [320,480],
+        iphone5: [320,568],
+        ipad: [768,1024]
+      };
+      var device = "iphone5", //$("input[name=device]:checked").val(),
+        orientation = "portrait", //$("input[name=orientation]:checked").val(),
+        mydims = alldims[device];
+      if (orientation === "landscape") {
+        mydims = [mydims[1],mydims[0]];
+      }
+    var win = window.open("https://krawaller.github.io/math3/www/index.html?demo=1&seed=284716495&source=fbtab&language="+($("body").hasClass("en")?"en":"sv"),'targetWindow','toolbar=0,location=0,status=0,menubar=0,scrollbars=1,resizable=1,width='+mydims[0]+',height='+mydims[1]);
+    win = win || {};
+    win.height = mydims[1];
+    win.width = mydims[0];
+    e.preventDefault();
+  });
+
+
+
 </script>
 </body></html>

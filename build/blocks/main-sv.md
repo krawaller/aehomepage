@@ -1,4 +1,6 @@
-Välkommen till **Algebra Explorer**, den symbolhanterande räknarappen för iOS som också hjälper dig utforska algebra!
+Välkommen till **Algebra Explorer**, den symbolhanterande räknarappen för iOS som också hjälper dig utforska algebra. Tryck på knappen nedan för att testa appen direkt här i webbläsaren!
+
+<button type='button' class='btn btn-default launchbutton'>Starta demoapp!</button>
 
 ##Funktionalitet
 
@@ -17,10 +19,6 @@ Välkommen till **Algebra Explorer**, den symbolhanterande räknarappen för iOS
 *    Gränssnitt anpassar sig efter orientering
 *    Inga tillköp finns i appen nu eller i framtiden, ditt engångsköp ger dig hela innehållet
 *    Stor kraft i litet paket; appen är mindre än 15MB
-
-##Uppdateringar
-
-$UPDATES
 
 ##Kontakt
 

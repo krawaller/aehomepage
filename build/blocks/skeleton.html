@@ -26,8 +26,8 @@
     <div class='clearfix'>
       <h1>
         Algebra Explorer
-          <a class='flaglink' href='index-se.html'><img class='flag sv pull-right' src="img/se.svg" /></a>
-          <a class='flaglink' href='index.html'><img class='flag en pull-right' src="img/gb.svg" /></a>
+          <a class='flaglink' href='index-se.html'><img class='flag sv pull-right' src="img/se.png" /></a>
+          <a class='flaglink' href='index.html'><img class='flag en pull-right' src="img/gb.png" /></a>
           <a href='$APPSTOREHREF' target='_blank'><img class='appstorebadge pull-right' src="img/app-store-badge.png" alt="app store" /></a>
       </h1>
       <h4>$TAGLINE</h4>
@@ -49,18 +49,38 @@ $CONTENT
 <script src='js/jquery.js'></script>
 <script src='js/jquery.slideshow.js'></script>
 <script>
-var lang = $("body").attr("class");
-console.log("My stuff");
-$('.gallery > div').iPhoneSlideshow({
-  iphoneImage: 'img/iphone.png',
-  glossImage: 'img/gloss.png',
-  screens : [
-    'img/screenshots-'+lang+'/entry.png',
-    'img/screenshots-'+lang+'/resultstep.png',
-    'img/screenshots-'+lang+'/glossary.png',
-    'img/screenshots-'+lang+'/oplearn.png',
-    'img/screenshots-'+lang+'/closeup.png'
-  ]
-});
+  var lang = $("body").attr("class");
+  $('.gallery > div').iPhoneSlideshow({
+    iphoneImage: 'img/iphone.png',
+    glossImage: 'img/gloss.png',
+    screens : [
+      'img/screenshots-'+lang+'/entry.png',
+      'img/screenshots-'+lang+'/resultstep.png',
+      'img/screenshots-'+lang+'/glossary.png',
+      'img/screenshots-'+lang+'/oplearn.png',
+      'img/screenshots-'+lang+'/closeup.png'
+    ]
+  });
+  $(".launchbutton").on("click",function(e){
+    var alldims = {
+        iphone: [320,480],
+        iphone5: [320,568],
+        ipad: [768,1024]
+      };
+      var device = "iphone5", //$("input[name=device]:checked").val(),
+        orientation = "portrait", //$("input[name=orientation]:checked").val(),
+        mydims = alldims[device];
+      if (orientation === "landscape") {
+        mydims = [mydims[1],mydims[0]];
+      }
+    var win = window.open("https://krawaller.github.io/math3/www/index.html?demo=1&seed=284716495&source=fbtab&language="+($("body").hasClass("en")?"en":"sv"),'targetWindow','toolbar=0,location=0,status=0,menubar=0,scrollbars=1,resizable=1,width='+mydims[0]+',height='+mydims[1]);
+    win = win || {};
+    win.height = mydims[1];
+    win.width = mydims[0];
+    e.preventDefault();
+  });
+
+
+
 </script>
 </body></html>

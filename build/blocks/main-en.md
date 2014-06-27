@@ -1,4 +1,6 @@
-Welcome to **Algebra Explorer**, the symbolic calculator app for iOS that will also help you explore algebra!
+Welcome to **Algebra Explorer**, the symbolic calculator app for iOS that will also help you explore algebra! To try out the app right here in your browser, just click the button below! Requires a modern browser.
+
+<button type='button' class='btn btn-default launchbutton'>Launch demo!</button>
 
 ##Features
 
@@ -16,10 +18,6 @@ Welcome to **Algebra Explorer**, the symbolic calculator app for iOS that will a
 *    Interface adapts after orientation
 *    No in-app purchase now or ever, you get the full power of the app
 *    Big punch in a small package; app is less than 15MB
-
-## Updates
-
-$UPDATES
 
 ##Contact
 

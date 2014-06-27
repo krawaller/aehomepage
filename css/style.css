@@ -1,14 +1,14 @@
 .flag {
 	height: 35px;
-	display: none;
-	margin-right: 1em;
+	margin-right: 0.5em;
 }
-.sv .en {display: block;}
-.en .sv {display: block;}
+.sv .en, .en .sv {height: 20px;}
+
+.launchbutton {margin-left:2em;}
 
 .appstorebadge {
 	height: 40px;
-	margin-right: 12px;
+	margin-right: 1em;
 }
 
 .logo {
