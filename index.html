@@ -3,9 +3,9 @@
 <head>
 	<title>Algebra Explorer</title>
 	<meta name="apple-itunes-app" content="app-id=850375056">
-	<link rel="stylesheet" href="css/style.css" type="text/css"></link>
   <link rel="stylesheet" href="css/bootstrap.css" type="text/css"></link>
   <link rel="stylesheet" href="css/bootstrap-theme.css" type="text/css"></link>
+  <link rel="stylesheet" href="css/style.css" type="text/css"></link>
 	<meta http-equiv="content-type" content="text/html; charset=utf-8">
   <link rel="shortcut icon" href="favicon.ico">
   <script>
@@ -30,68 +30,57 @@
 }(document, 'script', 'facebook-jssdk'));</script>
 
 <div class='container'>
-  <header class='row'>
-    <img class='logo pull-left' src="img/logo-big.png" />
-    <div class='clearfix'>
-      <h1>
-        Algebra Explorer
-          <a class='flaglink' href='index-se.html'><img class='flag sv pull-right' src="img/se.png" /></a>
-          <a class='flaglink' href='index.html'><img class='flag en pull-right' src="img/gb.png" /></a>
-          <a href='https://itunes.apple.com/us/app/algebra-explorer/id850375056?mt=8&uo=4' target='_blank'><img class='appstorebadge pull-right' src="img/app-store-badge.png" alt="app store" /></a>
-      </h1>
-      <h4>The love child between a math text book and a symbolic calculator</h4>
+  <div class='row headerrow'>
+    <img class='logo' src="img/logo-big.png" />
+    <h1 class='title'>Algebra Explorer</h1>
+    <h4 class='tagline text-center'>The love child between<br/>a math text book and<br/>a symbolic calculator</h4>
+    <div class='flagbox'>
+      <a class='flaglink' href='index-se.html'><img class='flag sv' src="img/se.png" /></a>
+      <a class='flaglink' href='index.html'><img class='flag en' src="img/gb.png" /></a>
     </div>
-  </header>
+  </div>
   <div class='row'>
-    <div class='col-md-6'>
-<p>Welcome to <strong>Algebra Explorer</strong>, the symbolic calculator app for iOS that will also help you explore algebra! To try out the app right here in your browser, just click the button below! Requires a modern browser.</p>
-<button type='button' class='btn btn-default launchbutton'>Launch demo!</button>
-
-<h2 id="features">Features</h2>
-<ul>
+    <div class='col-md-4'>
+      <h2>Run the app</h2>
+      <p>Algebra Explorer runs right here in your browser, completely free, without any installation or plugin required. Just click the button below to get started!</p>
+      <p class='center-block text-center'>
+        <button type='button' class='btn btn-default launchbutton'>Start Algebra Explorer!</button>
+      </p>
+      <h2 class='secondheadline'>Buy for iOS</h2>
+      <p>You can run the app in your mobile browser for free too, but if you want an offline version for your iOS device, or just want to support the project, you can buy Algebra Explorer in the App Store. The app version is completely identical to the online one.</p>
+      <a href='https://itunes.apple.com/us/app/algebra-explorer/id850375056?mt=8&uo=4' target='_blank'><img class='appstorebadge center-block' src="img/app-store-badge.png" alt="app store" /></a>
+    </div>
+    <div class='col-md-4'>
+      <h2>Functionality</h2>
+      <p><ul>
 <li>Full algebraic simplification of the expression you enter</li>
-<li>Decimal representation where applicable</li>
-<li>Custom parser tailored specifically for the app makes it easy to enter expressions</li>
-<li>26 different types of expressions supported</li>
 <li>Disclosure of every substep in the calculations</li>
+<li>Custom parser tailored specifically for the app makes it easy to enter expressions</li>
+<li>Decimal representation where applicable</li>
+<li>26 different types of expressions supported</li>
 <li>329 operations, each with its own in-depth presentation</li>
 <li>An integrated vocabulary of 146 word definitions</li>
-<li>A course of 56 lessons to walk through the contents of the app</li>
+<li>A course of 56 lessons to walk through the contents</li>
 <li>Explanatory texts in the app total 48701 words, equivalent to a 190 page novel!</li>
-<li>No server communications necessary, the app contains the full computing power</li>
-<li>Universal, supports both iPhone and iPad</li>
-<li>Interface adapts after orientation</li>
-<li>No in-app purchase now or ever, you get the full power of the app</li>
-<li>Big punch in a small package; app is less than 15MB</li>
 </ul>
-<h2 id="contact">Contact</h2>
-<p>For questions or feedback, <a href="http://facebook.com/algebraexplorer">visit us on Facebook</a> or <a href="mailto:david@krawaller.se">send an email</a>!</p>
-
-      <div class='customfbcontainer'>
-        <div class="fb-like" data-href="https://www.facebook.com/algebraexplorer" data-layout="standard" data-action="like" data-show-faces="false" data-share="false"></div>
-      </div>
+</p>
+      <h2 class='secondheadline'>Contact</h2>
+      <p><p>For questions or feedback, <a href="http://facebook.com/algebraexplorer">visit us on Facebook</a> or <a href="mailto:david@krawaller.se">send an email</a>!</p>
+</p>
     </div>
-    <div class='col-md-6 gallery'>
-      <div></div>
+    <div class='col-md-4'>
+      <h2>Demo video</h2>
+      <iframe class='center-block' width="287" height="540" src="//www.youtube.com/embed/Mw_1dKThAtI" frameborder="0" allowfullscreen></iframe>
     </div>
+  </div>
+  <div class='customfbcontainer'>
+    <div class="fb-like" data-href="https://www.facebook.com/algebraexplorer" data-layout="standard" data-action="like" data-show-faces="false" data-share="false"></div>
   </div>
 </div>
 
 <script src='js/jquery.js'></script>
-<script src='js/jquery.slideshow.js'></script>
 <script>
   var lang = $("body").attr("class");
-  $('.gallery > div').iPhoneSlideshow({
-    iphoneImage: 'img/iphone.png',
-    glossImage: 'img/gloss.png',
-    screens : [
-      'img/screenshots-'+lang+'/entry.png',
-      'img/screenshots-'+lang+'/resultstep.png',
-      'img/screenshots-'+lang+'/glossary.png',
-      'img/screenshots-'+lang+'/oplearn.png',
-      'img/screenshots-'+lang+'/closeup.png'
-    ]
-  });
   $(".launchbutton").on("click",function(e){
     var alldims = {
         iphone: [320,480],

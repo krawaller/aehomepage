@@ -1,24 +1,9 @@
-Welcome to **Algebra Explorer**, the symbolic calculator app for iOS that will also help you explore algebra! To try out the app right here in your browser, just click the button below! Requires a modern browser.
-
-<button type='button' class='btn btn-default launchbutton'>Launch demo!</button>
-
-##Features
-
 *    Full algebraic simplification of the expression you enter
-*    Decimal representation where applicable
-*    Custom parser tailored specifically for the app makes it easy to enter expressions
-*    $TYPES different types of expressions supported
 *    Disclosure of every substep in the calculations
+*    Custom parser tailored specifically for the app makes it easy to enter expressions
+*    Decimal representation where applicable
+*    $TYPES different types of expressions supported
 *    $OPERATIONS operations, each with its own in-depth presentation
 *    An integrated vocabulary of $WORDS word definitions
-*    A course of $LESSONS lessons to walk through the contents of the app
+*    A course of $LESSONS lessons to walk through the contents
 *    Explanatory texts in the app total $TEXTWORDS words, equivalent to a $PAGES page novel!
-*    No server communications necessary, the app contains the full computing power
-*    Universal, supports both iPhone and iPad
-*    Interface adapts after orientation
-*    No in-app purchase now or ever, you get the full power of the app
-*    Big punch in a small package; app is less than 15MB
-
-##Contact
-
-For questions or feedback, [visit us on Facebook](http://facebook.com/algebraexplorer) or [send an email](mailto:david@krawaller.se)!

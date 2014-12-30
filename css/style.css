@@ -1,19 +1,11 @@
 .flag {
 	height: 35px;
-	margin-right: 0.5em;
+	margin-left: 0.5em;
 }
 .sv .en, .en .sv {height: 20px;}
 
-.launchbutton {margin-left:2em;}
-
 .appstorebadge {
 	height: 40px;
-	margin-right: 1em;
-}
-
-.logo {
-	height: 130px;
-	margin: 20px;
 }
 
 .container {
@@ -40,4 +32,54 @@ dt {
 
 .gallery > div {
 	display: inline-block;
+}
+
+h2 {
+	text-align: center;
+	margin-bottom: 1.2em;
+}
+
+p {
+	margin-bottom: 1em
+}
+
+.secondheadline {
+	margin-top: 2em;
+}
+
+.headerrow {
+	margin-top: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding-bottom: 1em;
+	margin-bottom: 1em;
+	border-bottom: 1px solid #CCC;
+}
+
+.headerrow > * {
+	display: inline-block;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+h1 {
+	font-size: 64px;
+}
+
+.logo {
+	height: 80px;
+}
+
+.tagline {
+	font-style: italic;
+	font-weight: normal;
+	font-family: cursive;
+	color: #555;
+}
+
+.customfbcontainer {
+	position: absolute;
+	display: block;
+	bottom: 0;
 }

@@ -3,9 +3,9 @@
 <head>
 	<title>Algebra Explorer</title>
 	<meta name="apple-itunes-app" content="app-id=850375056">
-	<link rel="stylesheet" href="css/style.css" type="text/css"></link>
   <link rel="stylesheet" href="css/bootstrap.css" type="text/css"></link>
   <link rel="stylesheet" href="css/bootstrap-theme.css" type="text/css"></link>
+  <link rel="stylesheet" href="css/style.css" type="text/css"></link>
 	<meta http-equiv="content-type" content="text/html; charset=utf-8">
   <link rel="shortcut icon" href="favicon.ico">
   <script>
@@ -30,46 +30,45 @@
 }(document, 'script', 'facebook-jssdk'));</script>
 
 <div class='container'>
-  <header class='row'>
-    <img class='logo pull-left' src="img/logo-big.png" />
-    <div class='clearfix'>
-      <h1>
-        Algebra Explorer
-          <a class='flaglink' href='index-se.html'><img class='flag sv pull-right' src="img/se.png" /></a>
-          <a class='flaglink' href='index.html'><img class='flag en pull-right' src="img/gb.png" /></a>
-          <a href='$APPSTOREHREF' target='_blank'><img class='appstorebadge pull-right' src="img/app-store-badge.png" alt="app store" /></a>
-      </h1>
-      <h4>$TAGLINE</h4>
+  <div class='row headerrow'>
+    <img class='logo' src="img/logo-big.png" />
+    <h1 class='title'>Algebra Explorer</h1>
+    <h4 class='tagline text-center'>$TAGLINE</h4>
+    <div class='flagbox'>
+      <a class='flaglink' href='index-se.html'><img class='flag sv' src="img/se.png" /></a>
+      <a class='flaglink' href='index.html'><img class='flag en' src="img/gb.png" /></a>
     </div>
-  </header>
+  </div>
   <div class='row'>
-    <div class='col-md-6'>
-$CONTENT
-      <div class='customfbcontainer'>
-        <div class="fb-like" data-href="https://www.facebook.com/algebraexplorer" data-layout="standard" data-action="like" data-show-faces="false" data-share="false"></div>
-      </div>
+    <div class='col-md-4'>
+      <h2>$RUNHEADLINE</h2>
+      <p>$RUNINSTRUCTION</p>
+      <p class='center-block text-center'>
+        <button type='button' class='btn btn-default launchbutton'>$RUNBUTTON</button>
+      </p>
+      <h2 class='secondheadline'>$IOSHEADLINE</h2>
+      <p>$IOSCONTENT</p>
+      <a href='$APPSTOREHREF' target='_blank'><img class='appstorebadge center-block' src="img/app-store-badge.png" alt="app store" /></a>
     </div>
-    <div class='col-md-6 gallery'>
-      <div></div>
+    <div class='col-md-4'>
+      <h2>$FUNCHEADLINE</h2>
+      <p>$MD_FUNCCONTENT</p>
+      <h2 class='secondheadline'>$CONTACTHEADLINE</h2>
+      <p>$MD_CONTACT</p>
     </div>
+    <div class='col-md-4'>
+      <h2>$DEMOHEADLINE</h2>
+      <iframe class='center-block' width="287" height="540" src="//www.youtube.com/embed/$VIDEOLINK" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </div>
+  <div class='customfbcontainer'>
+    <div class="fb-like" data-href="https://www.facebook.com/algebraexplorer" data-layout="standard" data-action="like" data-show-faces="false" data-share="false"></div>
   </div>
 </div>
 
 <script src='js/jquery.js'></script>
-<script src='js/jquery.slideshow.js'></script>
 <script>
   var lang = $("body").attr("class");
-  $('.gallery > div').iPhoneSlideshow({
-    iphoneImage: 'img/iphone.png',
-    glossImage: 'img/gloss.png',
-    screens : [
-      'img/screenshots-'+lang+'/entry.png',
-      'img/screenshots-'+lang+'/resultstep.png',
-      'img/screenshots-'+lang+'/glossary.png',
-      'img/screenshots-'+lang+'/oplearn.png',
-      'img/screenshots-'+lang+'/closeup.png'
-    ]
-  });
   $(".launchbutton").on("click",function(e){
     var alldims = {
         iphone: [320,480],

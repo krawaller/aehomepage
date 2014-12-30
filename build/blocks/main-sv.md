@@ -1,25 +1,10 @@
-Välkommen till **Algebra Explorer**, den symbolhanterande räknarappen för iOS som också hjälper dig utforska algebra. Tryck på knappen nedan för att testa appen direkt här i webbläsaren!
-
-<button type='button' class='btn btn-default launchbutton'>Starta demoapp!</button>
-
-##Funktionalitet
-
 *    Allt innehåll på svenska och engelska
 *    Algebraisk förenkling av uttryck du skriver in
-*    Decimalformsrepresentation
-*    Specialbyggd tolkare skräddarsydd för appen gör det enkelt att mata in uttryck
-*    $TYPES olika sorters uttryck stödjs
 *    Redovisning av varje delsteg i uträkningarna
+*    Specialbyggd tolkare skräddarsydd för appen gör det enkelt att mata in uttryck
+*    Decimalformsrepresentation
+*    $TYPES olika sorters uttryck stödjs, inklusive logiska uttryck
 *    $OPERATIONS operationer, var och en med ingående presentation
 *    En integrerad ordlista med $WORDS ord
-*    En kurs på $LESSONS lektioner som går igenom allt innehåll i appen
-*    De förklarande texterna i appen uppgår totalt till $TEXTWORDS ord, vilket motsvarar en roman på $PAGES sidor
-*    Ingen serverkommunikation behövs, all beräkning görs i själva appen
-*    Universalapp stödjer både iPhone och iPad
-*    Gränssnitt anpassar sig efter orientering
-*    Inga tillköp finns i appen nu eller i framtiden, ditt engångsköp ger dig hela innehållet
-*    Stor kraft i litet paket; appen är mindre än 15MB
-
-##Kontakt
-
-För frågor eller feedback, [besök oss på Facebook](http://facebook.com/algebraexplorer) eller [skicka ett mail](mailto:david@krawaller.se)!
+*    En kurs på $LESSONS lektioner som går igenom allt innehåll
+*    De förklarande texterna uppgår totalt till $TEXTWORDS ord, vilket motsvarar en roman på $PAGES sidor
