@@ -1,5 +1,6 @@
 exports.texts = {
 	en: {
+		"$FACEBOOKLANG": "en_US",
 		"$RUNHEADLINE": "Run the app",
 		"$RUNINSTRUCTION": "Algebra Explorer runs right here in your browser, completely free, without any installation or plugin required. Just click the button below to get started!",
 		"$RUNBUTTON": "Start Algebra Explorer!",
@@ -15,6 +16,7 @@ exports.texts = {
 		"$IOSCONTENT": "You can run the app in your mobile browser for free too, but if you want an offline version for your iOS device, or just want to support the project, you can buy Algebra Explorer in the App Store. The app version is completely identical to the online one."
 	},
 	sv: {
+		"$FACEBOOKLANG": "sv_SE",
 		"$RUNHEADLINE": "Kör appen",
 		"$RUNINSTRUCTION": "Algebra Explorer körs direkt här i webbläsaren, utan någon kostnad eller installation. Kom igång direkt genom att klicka på knappen nedan!",
 		"$RUNBUTTON": "Starta Algebra Explorer!",
