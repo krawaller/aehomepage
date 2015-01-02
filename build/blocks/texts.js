@@ -18,7 +18,7 @@ exports.texts = {
 	sv: {
 		"$FACEBOOKLANG": "sv_SE",
 		"$RUNHEADLINE": "Kör i webbläsaren",
-		"$RUNINSTRUCTION": "Algebra Explorer körs direkt här i webbläsaren, utan någon kostnad eller installation. Kom igång direkt genom att klicka på knappen nedan!",
+		"$RUNINSTRUCTION": "Algebra Explorer körs direkt här i webbläsaren utan någon kostnad eller installation. Kom igång direkt genom att klicka på knappen nedan!",
 		"$RUNBUTTON": "Starta Algebra Explorer!",
 		"$DEMOHEADLINE": "Demonstration",
 		"$TAGLINE": "Kärleksbarnet från<br/>en mattebok och en<br/>symbolhanterande miniräknare",

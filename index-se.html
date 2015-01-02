@@ -42,7 +42,7 @@
   <div class='row'>
     <div class='col-md-4'>
       <h2>Kör i webbläsaren</h2>
-      <p>Algebra Explorer körs direkt här i webbläsaren, utan någon kostnad eller installation. Kom igång direkt genom att klicka på knappen nedan!</p>
+      <p>Algebra Explorer körs direkt här i webbläsaren utan någon kostnad eller installation. Kom igång direkt genom att klicka på knappen nedan!</p>
       <p class='center-block text-center'>
         <button type='button' class='btn btn-default launchbutton'>Starta Algebra Explorer!</button>
       </p>
@@ -99,6 +99,7 @@
     win.height = mydims[1];
     win.width = mydims[0];
     e.preventDefault();
+    ga('send', 'event', 'button', 'click', 'button', 'launch_'+lang);
   });
 </script>
 
