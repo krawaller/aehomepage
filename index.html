@@ -83,7 +83,7 @@
   var lang = $("body").attr("class");
   $(".launchbutton").on("click",function(e){
     var mydims = [320,568];
-    ga('send', 'event', 'button', 'click', 'button', 'launch_'+lang);
+    ga('send', 'event', 'button', 'click', 'launchbutton_'+lang);
     var win = window.open("www/index.html?seed=284716495&source=hp&language="+($("body").hasClass("en")?"en":"sv"),'targetWindow','toolbar=0,location=0,status=0,menubar=0,scrollbars=1,resizable=1,width='+mydims[0]+',height='+mydims[1]);
     win = win || {};
     win.height = mydims[1];
