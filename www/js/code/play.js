@@ -1,0 +1,1 @@
+(function(){console.log(["a","b","g"].slice(0,-1));console.log(["a","b","c"].slice(-1))}).call(this);

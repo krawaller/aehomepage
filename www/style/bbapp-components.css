@@ -1,0 +1,1288 @@
+/*
+COLORS!! 
+weird blue: rgb(21,125,251);
+purple experiment: rgb(84,0, 255)
+*/
+
+/*a {color:#5400FF;}*/
+
+p {
+margin: 0 0 1em;
+}
+
+/**************************************************************************************************************
+***************************************************************************************************************
+
+     T O P   L E V E L   S T Y L E S
+
+These are the styles applied to body and other top-level elements
+
+*/
+
+body {
+	-webkit-overflow-scrolling: touch;
+	-moz-overflow-scrolling: touch;
+	-o-overflow-scrolling: touch;
+	overflow-scrolling: touch;
+	user-select: none;
+	overflow: hidden;
+}
+body.large {
+	font-size: 16px;
+}
+
+.wrapper { /* to prevent weird sidescrolling bug */
+	overflow: hidden;
+}
+
+/**************************************************************************************************************
+***************************************************************************************************************
+
+     V I E W   S K E L E T O N
+
+These are the classes used in construction of the various views.
+
+*/
+
+.viewbox {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	overflow-x: hidden;
+	background: white;
+}
+.viewcontent {
+	position: absolute;
+	overflow-y: auto;
+	overflow-x: hidden;
+	top: 44px;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	padding: 12px;
+	padding-top: 1em;
+	padding-bottom: 3em;
+	text-align: left;
+	/*-webkit-transition: top 0.15s ease-in-out;
+	-moz-transition: top 0.15s ease-in-out;
+	-o-transition: top 0.15s ease-in-out;
+	transition: top 0.15s ease-in-out;*/
+}
+.viewbox:before {
+	position: absolute;
+	display: block;
+	font-family: "Glyphicons Regular";
+	color: #F5F5F5;
+	font-size: 100px;
+	margin-top: 32px;
+	text-align: right;
+	width: 100%;
+	padding-right: 10px;
+}
+.viewbox.glossarycat:before {content: "\E072";} /* book icon */
+.viewbox.calccat:before {content: "\E324";} /* calculator icon */
+.viewbox.toolcat:before {content: "\E461";} /* blacksmith icon */
+.viewbox.infocat:before {content: "\E196";} /* infocircle icon */
+.viewbox.schoolcat:before {content: "\E333";} /* certificate icon */
+.viewbox.helpcat:before {content: "\E195";} /* help icon */
+
+.padbox {padding: 12px; padding-top:1em; }
+body.large .viewcontent, body.large .padbox {
+	padding: 2em;
+}
+
+.viewtitleafter {
+	background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,1)), color-stop(100%,rgba(255,255,255,0))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=0 ); /* IE6-9 */
+	content: " ";
+	position: absolute;
+	display: block;
+	bottom: 0;
+	left: 0;
+	right: 12px;
+	top: 44px;
+	z-index: 3;
+	height: 15px;
+	margin: 0;
+	padding: 0;
+}
+body.landscape .viewtitleafter{height:10px;}
+
+body.portrait .viewcontentafter {
+	background: -moz-linear-gradient(top,  rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0)), color-stop(100%,rgba(255,255,255,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+	content: " ";
+	position: absolute;
+	display: block;
+	bottom: 0;
+	left: 0;
+	right: 12px;
+	height: 15px;
+	z-index: 100;
+}
+
+div.sequencecontainer {
+	overflow-x:hidden;
+	overflow-y:hidden;
+}
+
+div.sequence {
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+
+body.has3dtransforms div.sequence {
+	-webkit-transition: -webkit-transform 0.4s ease-in-out;
+	-webkit-transform: translateX(0);
+	-moz-transition: -moz-transform 0.4s ease-in-out;
+	-moz-transform: translateX(0);
+	-o-transition: -o-transform 0.4s ease-in-out;
+	-o-transform: translateX(0);
+	transition: transform 0.4s ease-in-out;
+	transform: translateX(0);
+}
+
+body.has3dtransforms div.sequencehiddenleft {
+	-webkit-transform: translate3d(-105%, 0, 0);
+	-moz-transform: translate3d(-105%, 0, 0);
+	-o-transform: translate3d(-105%, 0, 0);
+	transform: translate3d(-105%, 0, 0);
+}
+
+body.has3dtransforms div.sequencehiddenright {
+	-webkit-transform: translate3d(105%, 0, 0);
+	-moz-transform: translate3d(105%, 0, 0);
+	-o-transform: translate3d(105%, 0, 0);
+	transform: translate3d(105%, 0, 0);
+}
+
+body.has3dtransforms div.viewbox {
+	-webkit-transition: -webkit-transform 0.4s ease-in-out;
+	-moz-transition: -moz-transform 0.4s ease-in-out;
+	-o-transition: -o-transform 0.4s ease-in-out;
+	transition: transform 0.4s ease-in-out;
+}
+
+body.has3dtransforms div.slightlyleft {
+	-webkit-transform: translate3d(-15%, 0, 0);
+	-moz-transform: translate3d(-15%, 0, 0);
+	-o-transform: translate3d(-15%, 0, 0);
+	transform: translate3d(-15%, 0, 0);
+}
+
+
+body.no3dtransforms div.sequence {
+	transition: left 0.4s ease-in-out;
+	transition: right 0.4s ease-in-out;
+	left: 0;
+	right: 0;
+}
+
+body.no3dtransforms div.sequencehiddenleft {
+	transition: right 0.4s ease-in-out;
+	right: 105%;
+}
+
+body.no3dtransforms div.sequencehiddenright {
+	transition: left 0.4s ease-in-out;
+	left: 105%;
+}
+
+.absbox {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+
+/* controlling which tab is shown, every tab has a .mainnavsection class */
+.mainnavsection {display: none;}
+.mainnavsection.active {display: inherit;}
+
+
+/**************************************************************************************************************
+***************************************************************************************************************
+
+     T O P   H E A D L I N E
+
+All have class .indexedheadline. Used on top of every single view.
+
+*/
+
+.indexedheadline {
+	background-color: #fafafa;
+	border-bottom: 1px solid #e6e6e6;
+	display: block;
+	padding: 0;
+	text-align: center;
+	height: 44px;
+	line-height: 44px;
+	color: #222;
+	position: relative;
+	overflow-y: hidden;
+	font-family: "HelveticaNeue-Medium", "Helvetica Neue Medium", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	user-select: none;
+	-webkit-touch-callout: none;
+	padding: 0;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	text-align: center;
+	overflow: hidden;
+	-webkit-box-flex: 1;
+	-moz-box-flex: 1;
+	box-flex: 1;
+	font-weight: 500;
+
+	/*-webkit-transition: -webkit-transform 0.15s ease-in-out;
+	-moz-transition: -moz-transform 0.15s ease-in-out;
+	-o-transition: -o-transform 0.15s ease-in-out;
+	transition: transform 0.15s ease-in-out;*/
+
+	-webkit-transform: translate3d(0, 0, 0);
+	-moz-transform: translate3d(0, 0, 0);
+	-o-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);
+}
+
+a.gobackbutton:hover, a.gobackbutton:active, a.gobackbutton:visited {
+	color: rgb(0, 122, 255);
+	text-decoration: none;
+}
+
+.gobackbutton > img {
+	float:left;
+	margin-right: 2px;
+}
+
+a.gobackbutton {  /* The back button found to the far left inside the top header of non-root views */
+	position: absolute;
+	top: 0;
+	left: 0;
+	text-decoration: none;
+	color: rgb(0, 122, 255);
+	text-align: left;
+	width: 38px;
+	height: 44px;
+	border-radius: 3px;
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-size: 1.1em;
+}
+.gobackbutton > img.backbuttonbig {
+	width: 24px;
+	height: 44px;
+}
+
+body.portrait.phone a.gobackbutton > span {display:none;}
+
+.togglehelpbutton {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 44px;
+	height: 44px;
+}
+
+.togglehelpbutton:before {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 38px;
+	height: 44px;
+	text-align: center;
+	line-height: 44px;
+	font-size: 20px;
+	font-family: "HelveticaNeue-Medium", "Helvetica Neue Medium", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+	content: "?";
+	color: rgb(0, 122, 255);
+}
+
+
+/**************************************************************************************************************
+***************************************************************************************************************
+
+     O T H E R   S T A T U S   B A R   H E I G H T S
+
+Wee! :)
+
+*/
+
+body.phone.landscape .indexedheadline {
+	height: 32px;
+	line-height: 32px;
+}
+body.phone.landscape .viewcontent {
+	top: 32px;
+}
+body.phone.landscape .togglehelpbutton {
+	width: 32px;
+	height: 32px;
+}
+body.phone.landscape .togglehelpbutton:before {
+	width: 32px;
+	height: 32px;
+	line-height: 32px;
+}
+body.phone.landscape .gobackbutton {
+	height: 32px;
+}
+.backbuttonsmall {display:none;}
+body.phone.landscape .gobackbutton > .backbuttonsmall {
+	display: inline-block;
+	width: 24px;
+	height: 32px;
+}
+body.phone.landscape .gobackbutton > .backbuttonbig {
+	display: none;
+}
+body.phone.landscape .viewtitleafter {
+	top: 32px;
+}
+body.phone.landscape .controlpanel {
+	padding-top: 32px;
+}
+
+/**************************************************************************************************************
+***************************************************************************************************************
+
+     H E L P
+
+The .viewsmallhelp is the short help description that is displayed at the top of all views (unless turned off)
+Then .viewhelp is the big opened view.
+
+*/
+
+.viewsmallhelp {
+	background-color: #444;
+	border-radius: 6px;
+	text-align: left;
+}
+
+.viewhelp {
+	min-height: 97%;
+	padding: 12px;
+}
+
+.viewsmallhelp {
+	background-color: #444;
+	color: white;
+	border-radius: 9px;
+	border: 1px solid #444;
+	margin: 0 8px;
+	margin-top: 12px;
+	padding: 6px;
+	font-weight: normal;
+	font-size: 12px;
+	position: absolute;
+	z-index: 4;
+	right: 0;
+	display: none;
+	max-width: 270px;
+}
+
+.viewsmallhelp:before {
+	content: '';
+	position: absolute;
+	border-style: solid;
+	border-width: 0 5px 25px 5px;
+	display: block;
+	width: 0;
+	z-index: 1;
+	border-color: #444 transparent;
+	top: -25px;
+	right: 5px;
+}
+
+.viewsmallhelp:after {
+	content: '';
+	position: absolute;
+	border-style: solid;
+	border-width: 0 5px 25px 5px;
+	display: block;
+	width: 0;
+	z-index: 1;
+	top: -20px;
+	border-color: #444 transparent;
+	right: 5px;
+}
+
+.showingsmallhelp > .viewsmallhelp {
+	display: block;
+}
+
+.viewsmallhelp .helplink {
+	float: right;
+	margin-left: 10px;
+}
+
+.mainhelpsymbol { /* used in the main help text for each tab */
+	display: block;
+	text-align: center;
+	margin: 20px auto;
+	margin-top: 0;
+	font-size: 60px;
+}
+/* .helplist is used for lists in the help texts */
+.helplist {
+	margin-left: 3em;
+}
+.helplist dt {
+	font-size: 30px;
+	display: block;
+	width: 35px;
+	float: left;
+	clear: left;
+}
+.helplist dd {
+	margin-top: 14px;
+	float: left;
+}
+
+/**************************************************************************************************************
+***************************************************************************************************************
+
+     T O G G L E   B O X
+
+This is a utility thing that's used for toggling between different lists, such as expanding examples and
+sorting in the tool index. Purely utility, no style.
+
+*/
+
+.togglebox .togglesecondbutton, .togglebox .toggleboxsecondbutton, .togglebox .togglecontentsecond {display: none;}
+.togglebox.togglesecond .togglesecondbutton, .togglebox.togglesecond .toggleboxsecondbutton {display: inline-block;}
+.togglebox.togglesecond .togglecontentsecond {display: block;}
+.togglebox.togglesecond .togglefirstbutton, .togglebox.togglesecond .toggleboxfirstbutton, .togglebox.togglesecond .togglecontentfirst {display: none;}
+
+
+/**************************************************************************************************************
+***************************************************************************************************************
+
+     R O W N U M B E R   S U B H E A D E R
+
+These are the small headline used inside boxes, for example the one saying "Analysis" on the main calc page.
+The name rownum is just for historical reasons. Also used for actual rownumbers in calculation results, and
+a few other places. All have the .rownum class.
+
+*/
+
+.rownum {
+	margin-right: 0.6em;
+	margin-top: 1px;
+	margin-bottom: 3px;
+	font-size: 1em;
+	color: #FFF;
+	background-color: #555;
+	border-radius: 10px;
+	min-width: 15px;
+	padding: 1px 6px;
+	text-align: center;
+}
+
+h5.rownum {
+	display: inline-block;
+	margin: 0 auto;
+	font-weight: normal;
+	text-align:center;
+	margin-bottom: 1em;
+}
+
+
+/**************************************************************************************************************
+***************************************************************************************************************
+
+    S U B   H E A D E R   I N S I D E   V I E W S
+
+In-text headers or section headers (that are NOT inside a box like the rownum headers abobe) all have the .nav-header class.
+They're also all h5 elements, I think.
+You can find examples of this on a word explanation page that has operation links (reading "Related basic operations" etc).
+
+*/
+
+h5.nav-header {
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	color: #999;
+	margin-top: 3em;
+	font-size: 0.85em;
+	margin-bottom: 2em;
+	margin-left: 0;
+	margin-right: 3em;
+	border-bottom: 1px solid #999;
+	padding-left: 2em;
+	text-align: left;
+}
+
+.landscape h5.nav-header {
+	padding-left: 4em;
+}
+
+/**************************************************************************************************************
+***************************************************************************************************************
+
+    P I L L   L I N K
+
+This refers to the pill-shaped link to a word/operation/lesson/infopage that can be found throughout the app.
+They are all anchor tags, and all have the class .davidlink.
+
+*/
+
+.davidlink {
+	display: inline-block;
+	border-radius: 3px;
+	background-color: #E7EDFF;
+	border: 1px solid #C7D3FF;
+	padding: 2px 4px;
+	color: #000;
+	text-decoration: none;
+	font-size: 0.9em;
+	margin: 3px;
+	min-width: 25px;
+}
+.davidlink:hover {
+	color: #000;
+	cursor: pointer;
+}
+.davidlink:active {
+	background-color: #C7D3FF;
+	color: #000;
+}
+div.davidlist { /* davidlinks are (always?) found insides divs with class .davidlist */
+	text-align: center;
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+
+
+   /* ------------------- Tool and lesson link completion marker ------------------------------------------------ */
+
+.toollink:after, .lessonlink:after {
+	display: inline-block;
+	padding-left: 3px;
+}
+.mark {
+	padding-right: 2px;
+}
+.mark:after {
+	display: inline-block;
+}
+
+.viewtitle .nolink:after{border:0;}
+
+.mark.green:after {background-color: #29D107;}
+.mark.red:after {background-color: #F11308;border:0;}
+.mark.yellow:after {background-color: #FFDD00;}
+
+.toollink.green:after, .lessonlink.green:after, .mark.green:after,
+.toollink.red:after, .lessonlink.red:after, .mark.red:after,
+.toollink.yellow:after, .lessonlink.yellow:after, .mark.yellow:after {
+	background-color:inherit;
+	border-radius:0;
+	border: none;
+	font-family: "tuffvid";
+	font-size: 0.9em;
+}
+
+
+.toollink.yellow:after, .lessonlink.yellow:after, .mark.yellow:after {content:"c";}
+.toollink.green:after, .lessonlink.green:after, .mark.green:after {content:"a";}
+.toollink.red:after, .lessonlink.red:after, .mark.red:after {
+	content:"b";
+}
+
+/**************************************************************************************************************
+***************************************************************************************************************
+
+	T R A F F I C   L I G H T S
+
+Shown on toolview and lessonview.
+
+*/
+
+.trafficlight {
+	text-align: center;
+	background-color: #444;
+	width: 20px;
+	height: 62px;
+	border-radius: 4px;
+	float: left;
+	margin-right: 10px;
+	padding-top: 2px;
+	font-size: 14px;
+	position: relative;
+}
+.trafficlight > span {
+	width: 14px;
+	height: 14px;
+	/*border-radius: 7px;*/
+	display: inline-block;
+}
+.trafficlight > span:after {
+	position: absolute;
+	left: 3px;
+	font-family: "myfont";
+}
+
+.tredlamp:after {color:#4B0300;content:"b";}
+.tyellowlamp:after {color:#625500;content:"c";}
+.tgreenlamp:after {color:#0E5500;content:"a";}
+
+.trafficlight.trafficred > .tredlamp:after {color:#F11308;text-shadow: 0 0 6px #F11308;}
+.trafficlight.trafficyellow > .tyellowlamp:after {color:#FFDD00;text-shadow: 0 0 6px #FFDD00;}
+.trafficlight.trafficgreen > .tgreenlamp:after {color:#29D107;text-shadow: 0 0 6px #29D107;}
+
+
+
+/**************************************************************************************************************
+***************************************************************************************************************
+
+	N A V I G A T I O N   T A B S
+
+Tabs will look different depending if the body tag has the .phone or the .large class
+Tabs will be bottom or left depending if the body tag has the .portrait or the .landscape class
+
+*/
+
+
+	/* ------------------- Control positions depending on screen size/orientation ------------------------------------------ */
+
+.controlpanel { /* the div containing the tabs */
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	text-align: center;	
+	z-index: 10; /* so not to be below view content box shadow */
+	background-color: #fafafa;
+	border-color: #e6e6e6;
+}
+body.portrait .controlpanel {
+	border-top: 1px solid #e6e6e6;
+	right: 0;
+}
+body.landscape .controlpanel {
+	border-right: 1px solid #e6e6e6;
+	top: 0;
+	padding-top: 44px;
+}
+body.phone.portrait .controlpanel {
+	height: 49px;
+}
+body.landscape .controlpanel{
+	width: 49px;
+}
+body.large.portrait .controlpanel {
+	height: 65px;
+}
+body.large.landscape .controlpanel {
+	width: 65px;
+}
+body.phone.landscape .wrapper {left: 49px;}
+body.phone.portrait .wrapper {bottom: 49px;}
+body.large.portrait .wrapper {bottom: 65px;}
+body.large.landscape .wrapper {left: 65px;}
+
+body.landscape .controlpanel:after { /* hides border between controlpanel and status bar */
+	display: block;
+	position: absolute;
+	background-color: #fafafa;
+	width: 1px;
+	height: 32px;
+	top: 0;
+	left: 48px;
+	z-index: 11;
+	content: "";
+}
+body.landscape.large .controlpanel:after {
+	left: 64px;
+	height: 43px;
+}
+
+	/* --------------------------------------------- Tab look ------------------------------------------------- */
+
+.mainnavicon {
+	display: block;
+	font-size: 20px;
+	color: rgb(146,146,146);
+}
+
+.large .mainnavicon {
+	font-size: 30px;
+}
+
+body.portrait .tab {
+	display: inline-block;
+	width: 18%;
+}
+
+body.landscape .tab {
+	display: block;
+	padding-top: 16px;
+	height: 18%;
+}
+.controlbuttontext {
+	font-size: 10px;
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-weight: 300;
+	color: rgb(146,146,146);
+}
+.controlbuttontextshort {display: none;}
+body.phone.landscape .controlbuttontext {display: none;}
+body.phone.landscape .controlbuttontextshort {display: inline;}
+.tab, .tab:hover, .tab:active {
+	text-decoration: none;
+}
+
+/* -----------------------------------------Active Tab look ------------------------------------------------- */
+
+.tab.active > .mainnavicon {
+	color: rgb(0, 122, 255);
+}
+.tab.active > .controlbuttontext {
+	color: rgb(0, 122, 255);
+}
+
+
+/**************************************************************************************************************
+***************************************************************************************************************
+
+	T E X T   R E P O R T   M O D E
+
+In textreport mode, a button is shown after every single (almost) piece of text, to facilitate
+sending a text-related bugreport.
+
+*/
+
+.textreportmode span.reportlink {
+	display: inline-block;
+	border-radius: 4px;
+	background-color: #B94A48;
+	color: white;
+	padding: 0 0.5em;
+	margin-left: 0.35em;
+}
+
+.indexedheadline .reportlink {
+	line-height: 2.3em;
+}
+
+.textreportmode .textreportmodeonbutton {
+	display: none;
+}
+.textreportmode .textreportmodeoffbutton {
+	display: inline-block;
+}
+button.textreportmodeoffbutton {display:none;}
+
+
+span.reportlink, .reportbox, div.collapsed div.reportbox, .textreportmode .collapsed .reportbox { display: none;}
+
+.textreportmode .reportbox {display: block;margin-top:0;}
+
+.relevanttext {
+	margin-left: 3em;
+	margin-right: 3em;
+	font-style: italic;
+	font-size: 0.9em;
+	text-align: center;
+}
+
+
+/**************************************************************************************************************
+***************************************************************************************************************
+
+	B U T T O N S
+
+*/
+
+button.btn, button.btn:active, button.btn:hover, button.btn:focus, button.btn.disabled,
+a.btn, a.btn:active, a.btn:hover, a.btn:focus, a.btn.disabled {
+	border-color: rgb(0, 122, 255);
+	color: rgb(0, 122, 255);
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	background-color: transparent;
+}
+
+button.btn.active, a.btn.active {
+	border-color: rgb(0, 122, 255);
+	background-color: rgb(0, 122, 255);
+	color: white;
+}
+
+button.btn:active, a.btn:active {
+	border-color: rgb(0, 122, 255);
+	background-color: #E7EDFF; /* #E7EDFF #C7D3FF */
+	color: rgb(0, 122, 255);
+}
+
+
+button.btn.btn-xs,a.btn.btn-xs {
+	padding-top: 3px;
+	padding-bottom: 3px;
+}
+
+/**************************************************************************************************************
+***************************************************************************************************************
+
+     H O R I Z O N T A L   S C R O L L   B O X
+
+Used to display maths. A box with horizontal scrolling.
+
+*/
+
+.aftercontainer.oppartcontainer {
+	padding-right: 15px;
+}
+
+.horizontalbox {
+	margin: 0;
+	position: relative;
+}
+.examplelist .horizontalbox {
+	display: block;
+	max-width: 100%;
+}
+.examplelist .oprest {
+	max-width: inherit;
+}
+.examplelist .oppartcontainer {
+	width: 45%;
+}
+.examplelist .beforecontainer {
+	text-align: right;
+}
+.examplelist .aftercontainer {
+	text-align: left;
+}
+.examplelist .arrow {
+	width: 12%;
+}
+.horizontalboxcontent {
+	overflow-x: auto;
+	padding: 0 15px 1em 15px;
+	white-space: nowrap;
+	text-align: center;
+}
+.horizontalboxcontent > * {
+	display: inline-block;
+}
+.horizontalboxcontent > table {
+	display: table;
+}
+
+.horizontalbox  .leftsidegradient {
+	background: -moz-linear-gradient(left,  rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%); 
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(255,255,255,1)), color-stop(100%,rgba(255,255,255,0))); 
+	background: -webkit-linear-gradient(left,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%); 
+	background: -o-linear-gradient(left,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
+	background: -ms-linear-gradient(left,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%); 
+	background: linear-gradient(to right,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00e5e5e5',GradientType=1 );
+	position: absolute;
+	display: block;
+	bottom: 0;
+	left: 0;
+	top: 0;
+	width: 15px;
+	z-index: 3;
+	margin: 0;
+	padding: 0;
+}
+.horizontalbox  .rightsidegradient {
+	background: -moz-linear-gradient(left,  rgba(255,255,255,0.01) 0%, rgba(255,255,255,1) 100%);
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(255,255,255,0.01)), color-stop(100%,rgba(255,255,255,1)));
+	background: -webkit-linear-gradient(left,  rgba(255,255,255,0.01) 0%,rgba(255,255,255,1) 100%);
+	background: -o-linear-gradient(left,  rgba(255,255,255,0.01) 0%,rgba(255,255,255,1) 100%);
+	background: -ms-linear-gradient(left,  rgba(255,255,255,0.01) 0%,rgba(255,255,255,1) 100%);
+	background: linear-gradient(to right,  rgba(255,255,255,0.01) 0%,rgba(255,255,255,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#03ffffff', endColorstr='#ffffff',GradientType=1 );
+	content: " ";
+	position: absolute;
+	display: block;
+	bottom: 0;
+	right: 0;
+	top: 0;
+	width: 15px;
+	z-index: 3;
+	margin: 0;
+	padding: 0;
+}
+
+
+/**************************************************************************************************************
+***************************************************************************************************************
+
+     M A T H   O B J E C T
+
+Displaying maths woo!  :)
+
+*/
+
+#MathJax_Message { margin-left: -10000% !important; }
+
+.mathobj, .mathobj:hover {
+	cursor: pointer;
+	padding: 3px;
+	border-radius: 3px;
+	color: #333333;
+	display: inline-block;
+	text-decoration: none;
+	background-color:rgba(122, 122, 122,0.01);
+}
+
+.mathobj:active {
+	background-color:rgb(0, 122, 255);
+}
+
+
+/**************************************************************************************************************
+***************************************************************************************************************
+
+     G L Y P H   I C O N S
+
+The app implements Glyphicons in a custom way using span tags with the .txticon class, then containing
+pure text. So no need for the normal Glyphicons :after thing.
+
+*/
+
+@font-face {
+  font-family: "myfont";
+  src:url("../fonts/myfont.eot");
+  src:url("../fonts/myfont.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/myfont.woff") format("woff"),
+    url("../fonts/myfont.ttf") format("truetype"),
+    url("../fonts/myfont.svg#myfont") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "tuffvid";
+  src:url("../fonts/tuffvid.eot");
+  src:url("../fonts/tuffvid.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/tuffvid.woff") format("woff"),
+    url("../fonts/tuffvid.ttf") format("truetype"),
+    url("../fonts/tuffvid.svg#tuffvid") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Glyphicons Regular';
+  src: url('../fonts/glyphicons-regular.eot');
+  src: url('../fonts/glyphicons-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/glyphicons-regular.woff') format('woff'), url('../fonts/glyphicons-regular.ttf') format('truetype'), url('../fonts/glyphicons-regular.svg#glyphiconsregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.myicon {
+	font-family: "tuffvid";
+	font-style: normal !important;
+	font-weight: normal !important;
+	font-variant: normal !important;
+	text-transform: none !important;
+	speak: none;
+	line-height: 1em;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.txticon {
+	font-family: 'Glyphicons Regular';
+	font-style: normal;
+	font-weight: normal;
+	/*color: #5d5d5d;*/
+	vertical-align: middle;
+	text-transform: none;
+	-webkit-font-smoothing: antialiased;
+	font-variant: normal;
+	line-height: 1em;
+	text-decoration: none;
+}
+
+
+/**************************************************************************************************************
+***************************************************************************************************************
+
+     S T R U C T U R E   D I A G R A M
+
+Rendered in a table in the closeup view.
+
+*/
+
+
+.structtable td {
+	vertical-align: top;
+	border: 1px solid #777;
+	padding: 0;
+	position: relative;
+}
+
+.structtable {
+	border: 1px solid #777;
+}
+
+.mathview > .viewcontent {
+	text-align: center;
+}
+
+.markchild, .markme {
+	background-color: #E7EDFF;
+}
+
+.markme .structtype {
+	background-color: #C7D3FF;
+	font-weight: bold;
+}
+
+.structtype {
+	display: block;
+	position: absolute;
+	text-align: center;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	padding: 1px 3px;
+}
+
+.structtype.dummy {
+	position: inherit;
+	visibility: hidden;
+	font-weight: bold;
+}
+
+.structval {
+	display: block;
+	padding: 4px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	max-width: 50px;
+}
+
+
+/**************************************************************************************************************
+***************************************************************************************************************
+
+     C L O S E U P   L A Y O U T
+
+Rules specific to the closeup view
+
+*/
+
+body.landscape .topbit {
+	float: left;
+	width: 54%;
+}
+
+body.landscape .structrender {
+	width: 42%;
+	margin-left: 1em;
+	display: inline-block;
+}
+
+body.landscape .textrender {
+	display: inline-block;
+	text-align: left;
+}
+
+/**************************************************************************************************************
+***************************************************************************************************************
+
+     P A R S E R   L A Y O U T
+
+Rules specific to the parser view
+
+*/
+
+body.landscape .renderedinput {
+	display: inline-block;
+	width: 48%;
+	text-align: left;
+}
+
+body.landscape .inputdescription {
+	float: left;
+	width: 50%;
+	text-align: left;
+}
+
+.parserinput {
+	position: relative;
+	max-width: 700px;
+	margin: 0 auto;
+}
+
+.portrait .parserinput {
+	margin-top: 1em;
+}
+
+
+input.textfield {
+	background-color: transparent;
+}
+
+body.phone .parserinput > .expressionsbutton {display: none;}
+body.phone .emptybox > .expressionsbutton {display: inline-block;}
+.emptybox > .expressionsbutton {display: none;}
+button.expressionsbutton {
+	float: left;
+	margin-right: 10px;
+	white-space: normal;
+	font-size: 11px;
+	line-height: 1.1em;
+	overflow-y: hidden;
+	padding: 4px 7px;
+	width: 80px;
+}
+
+.introhelptext {
+	position: absolute;
+	bottom: 1em;
+	right: 15%;
+	text-align: left;
+	left: 15%;
+}
+
+.analysis, .emptybox {
+	margin: 1em auto;
+	max-width: 650px;
+}
+
+/*.parserview .analysis {
+	opacity: 0;
+	-webkit-transition: opacity 0.3s ease-in-out;
+	-moz-transition: opacity 0.3s ease-in-out;
+	-o-transition: opacity 0.3s ease-in-out;
+	transition: opacity 0.3s ease-in-out;
+}
+
+.notempty .analysis {
+	opacity: 1;
+}*/
+
+
+button.newcalcbutton {
+	width: 100%;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.text-error {
+	color: red;
+	text-shadow: #FFF 0 0 5px;
+	margin-top: 10px;
+}
+
+.calcbutton {
+	width: 100px;
+}
+
+/***** TEXTCLEARERBUTTON *****/
+
+.textclearerbtn {
+	top: 3px;
+	font-size: 18px;
+	position: absolute;
+	text-align: center;
+	right: 98px;
+	width: 35px;
+	height: 30px;
+	visibility: hidden;
+	cursor:pointer;
+	-webkit-transition: opacity 0.3s ease-in-out, visibility 0s 0.3s;
+	-moz-transition: opacity 0.3s ease-in-out, visibility 0s 0.3s;
+	-o-transition: opacity 0.3s ease-in-out, visibility 0s 0.3s;
+	transition: opacity 0.3s ease-in-out, visibility 0s 0.3s;
+	opacity: 0;
+	text-shadow: -1px -1px 0 white,1px -1px 0 white,-1px 1px 0 white,1px 1px 0 white;
+	text-decoration: none;
+}
+
+.textclearerbtn > span {top:5px;}
+
+.notempty .textclearerbtn {
+	-webkit-transition: opacity 0.2s ease-in-out;
+	-moz-transition: opacity 0.2s ease-in-out;
+	-o-transition: opacity 0.2s ease-in-out;
+	transition: opacity 0.2s ease-in-out;
+	opacity: 1;
+	visibility: visible;
+}
+
+/**************************************************************************************************************
+***************************************************************************************************************
+
+     L A N G U A G E   S E L E C T
+
+Rules specific to the language select view
+
+*/
+
+.flagbox img {
+	margin: 3em;
+	display: inline-block;
+	/*border: 3px solid white;*/
+	opacity: 0.6;
+}
+
+.flagbox img:active {
+	/*border-color: rgb(0, 122, 255);*/
+	opacity: 1;
+}
+
+.flagbox img {
+	max-width: 30%;
+	max-height: 80%;
+}
+
+.flagbox {
+	text-align: center;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+
+/**************************************************************************************************************
+***************************************************************************************************************
+
+     T E X T F I E L D   F O C U S   F I X
+
+*/
+
+body.device.focusedtext .indexedheadline {
+	-webkit-transform: translate3d(0, -105%, 0);
+	-moz-transform: translate3d(0, -105%, 0);
+	-o-transform: translate3d(0, -105%, 0);
+	transform: translate3d(0, -105%, 0);
+}
+body.device.focusedtext .wrapper {bottom:0;}
+
+body.device.focusedtext.portrait .controlpanel,
+body.device.focusedtext.landscape .mainnav,
+body.device.focusedtext .viewtitleafter,
+body.device.focusedtext.landscape .controlpanel:after {
+	display: none;
+}
+
+body.device.focusedtext .introhelptext {
+	left: -1000%;
+}
+
+body.device.focusedtext .viewcontent {top: -12px;}
+body.device.landscape.focusedtext .viewcontent {top: -6px;}

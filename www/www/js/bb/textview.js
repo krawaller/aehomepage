@@ -1,0 +1,1 @@
+(function(){CATS.bb.textview=CATS.bb.BaseView.extend({tagName:"span",className:"mathtext",initialize:function(type,textid,lang){this.type=type;this.textid=textid;this.lang=lang;return this.constructor.__super__.initialize.apply(this,[o])},render:function(){return this.$el.html(this.type+":"+this.textid)}})}).call(this);

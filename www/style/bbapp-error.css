@@ -1,0 +1,39 @@
+button.abouterrorbutton { /* i info */
+	display: block;
+	margin: 0 auto;
+}
+
+.errorbtncontainer {
+	text-align: center;
+	margin: 2em;
+}
+
+.reportview dt {
+	float: left;
+	margin-right: 0.5em;
+	clear: left;
+}
+
+.bug {
+	position: absolute;
+}
+
+.errorreport .bug1 {
+	-webkit-transform: rotate(65deg);
+	-moz-transform: rotate(65deg);
+	transform: rotate(65deg);
+	left: -15%;
+	top: 200px;
+	display: inline-block;
+	-webkit-animation: lefttoright 3s linear 3s 1;
+    -moz-animation: lefttoright 3s linear 3s 1;
+    animation: lefttoright 3s linear 3s 1;
+}
+
+.bug1, .bug2, .bug3, .bug4, .bug5 {
+	display: none;
+}
+
+@-moz-keyframes lefttoright { 100% { left: 115%; top: 20px; } }
+@-webkit-keyframes lefttoright { 100% { left: 115%; top: 20px; } }
+@keyframes lefttoright { 100% { left: 115%; top: 20px; } }

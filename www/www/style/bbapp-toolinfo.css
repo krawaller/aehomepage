@@ -1,0 +1,259 @@
+.opintro {
+	margin-top: 1em;
+}
+
+.aftercontainer.oppartcell {padding-left: 5px;}
+.beforecontainer.oppartcell {padding-right: 5px;}
+
+.exampleholder {
+	text-align:center;
+}
+
+.toolexamplesecond {
+	margin-left: 2px;
+}
+.toolexamplefirst {
+	margin-right: 2px;
+}
+
+.optable {position:relative; text-align: center;}
+.oprow {vertical-align: middle;}
+.arrowhalf {width:10px;}
+.explanationrow {vertical-align:bottom;}
+
+.explanationsection .beforecontainer > div {float:none;}
+.explanationsection .aftercontainer > div {float:none;}
+
+.helpitemview dt {
+	margin-left: 1em;
+}
+.helpitemview dd {
+	margin-left: 3.5em;
+	margin-right: 2em;
+	margin-bottom: 1em;
+}
+.helplist dd {
+	margin-left: 1em;
+}
+
+.redirectedfrom, .sectionexplanation {
+	font-size: 0.9em;
+	margin: 0 1em;
+	margin-bottom: 2em;
+}
+
+.helpitemview li {
+	margin-bottom: 1em;
+	margin-top: 1em;
+}
+
+.helpitemview p {
+	margin-bottom: 1em;
+}
+
+.toolinfo {
+	text-align: left;
+}
+
+.toolfilter button {
+	min-width: 38px;
+	font-size: 0.8em;
+}
+
+.forgetconfirmbuttontext {
+	max-width: 250px;
+	white-space: normal;
+	display: block;
+}
+
+.forgetconfirmbutton {
+	position: relative;
+}
+
+.forgetmeter {
+	height: 4px;
+	background-color: #444;
+	margin: 4px auto;
+}
+
+@-webkit-keyframes shrink {
+	from {width: 100%;}
+	to {width: 1%;}
+}
+@-moz-keyframes shrink {
+	from {width: 100%;}
+	to {width: 1%;}
+}
+@-o-keyframes shrink {
+	from {width: 100%;}
+	to {width: 1%;}
+}
+@keyframes shrink {
+	from {width: 100%;}
+	to {width: 1%;}
+}
+
+.confirm .forgetmeter {
+	-webkit-animation: shrink 4s 0s 1 linear;
+	-moz-animation: shrink 4s 0s 1 linear;
+	animation: shrink 4s 0s 1 linear;
+}
+
+button.schoolbutton {
+	clear: both;
+	display: none;
+	margin: 0 auto;
+}
+
+.instructionbox {
+	margin-top: 2em;
+}
+
+.lessonbox .lessonlinkholder {
+	text-align: center;
+	clear: both;
+}
+
+.toolinfoyellow .learnbutton, .toolinfogreen .forgetbutton, .toolinfored .cannotlearnbutton, .confirm .forgetconfirmbutton {
+	display: block;
+}
+
+.confirm .forgetbutton {
+	display: none;
+}
+
+.toolindex > .viewcontent {
+	text-align: center;
+}
+
+.toolfilter {
+	display: inline-block;
+	margin-bottom: 1em;
+	margin-top: 1em;
+}
+
+body.phone.landscape .toolinfo .btn-group {
+	margin-top: -8px;
+}
+
+.toolinfo .btn-group button {
+	width: 90px;
+}
+
+.explanationparagraph {
+	margin-bottom: 1.5em;
+}
+
+.explanationsection .linksection, .explanationsection .schoolsection,
+.linksection .explanationsection, .linksection .schoolsection,
+.schoolsection .explanationsection, .schoolsection .linksection {
+	display: none;
+}
+
+.explanationsection .explanationsection {
+	margin-top: 1em;
+}
+
+button.buttonexample {
+	display: block;
+	margin: 0 auto;
+	margin-bottom: 2em;
+}
+
+.toolinfo .oppartcontainer {
+	padding-top: 0;
+	text-align:center;
+}
+
+.toolinfo .arrow {
+	padding-bottom: 1em;
+}
+
+.toolexplanation {
+	display: table-row;
+	position: relative;
+}
+
+.toolexplanation > div {
+	display: table-cell;
+	padding: 2px;
+	vertical-align: bottom;
+	text-align: center;
+}
+
+
+.returnsparagraph, .targetsparagraph {
+	text-transform: lowercase;
+}
+
+.toolexampletext {
+	background-color: #E7EDFF;
+	border-radius: 9px;
+	position: relative;
+	border: 1px solid #AAA;
+	margin-bottom: 2em;
+	padding: 3px 0.5em;
+	font-weight: normal;
+	/*display: inline-block;*/
+	max-width: 350px;
+	white-space: normal;
+	min-width: 123px;
+	text-align: left;
+	display: inline-block;
+}
+
+.toolexampletext:before {
+	content: '';
+	position: absolute;
+	border-style: solid;
+	border-width: 25px 5px 0 5px;
+	display: block;
+	width: 0;
+	z-index: 1;
+	border-color: #AAA transparent;
+	bottom: -25px;
+	left: 53%;
+}
+
+.toolexampletext:after {
+	content: '';
+	position: absolute;
+	border-style: solid;
+	border-width: 25px 5px 0 5px;
+	display: block;
+	width: 0;
+	z-index: 1;
+	bottom: -20px;
+	border-color: #E7EDFF transparent;
+	left: 53%;
+}
+
+.toolexplanation > div > div:nth-child(1) > .toolexampletext:after {left:42%;}
+.toolexplanation > div > div:nth-child(1) > .toolexampletext:before {left:42%;}
+
+
+/************************ T O O L   I N D E X ****************************************/
+
+
+.toolindex .btn-group {margin-bottom:6px;}
+
+.toggleboxbox .toolbox {display:none;}
+
+.toggleboxbox .showdecimalifyingbasic .togglebox.decimalifyingbasiclist,
+.toggleboxbox .showdecimalifyingcomplex .togglebox.decimalifyingcomplexlist,
+.toggleboxbox .showintegritycheckbasic .togglebox.integritycheckbasiclist,
+.toggleboxbox .showintegritycheckcomplex .togglebox.integritycheckcomplexlist,
+.toggleboxbox .showconditionallysimplifybasic .togglebox.conditionallysimplifybasiclist,
+.toggleboxbox .showconditionallysimplifycomplex .togglebox.conditionallysimplifycomplexlist,
+.toggleboxbox .showrephrasingbasic .togglebox.rephrasingbasiclist,
+.toggleboxbox .showrephrasingcomplex .togglebox.rephrasingcomplexlist,
+.toggleboxbox .showcomplicatingbasic .togglebox.complicatingbasiclist,
+.toggleboxbox .showcomplicatingcomplex .togglebox.complicatingcomplexlist,
+.toggleboxbox .showsimplifyingbasic .togglebox.simplifyingbasiclist,
+.toggleboxbox .showsimplifyingcomplex .togglebox.simplifyingcomplexlist {
+	display: block;
+}
+
+.filterexplanation {
+	margin: 1em 0;
+}

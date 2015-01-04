@@ -83,23 +83,13 @@
 <script>
   var lang = $("body").attr("class");
   $(".launchbutton").on("click",function(e){
-    var alldims = {
-        iphone: [320,480],
-        iphone5: [320,568],
-        ipad: [768,1024]
-      };
-      var device = "iphone5", //$("input[name=device]:checked").val(),
-        orientation = "portrait", //$("input[name=orientation]:checked").val(),
-        mydims = alldims[device];
-      if (orientation === "landscape") {
-        mydims = [mydims[1],mydims[0]];
-      }
-    var win = window.open("https://krawaller.github.io/math3/www/index.html?demo=1&seed=284716495&source=fbtab&language="+($("body").hasClass("en")?"en":"sv"),'targetWindow','toolbar=0,location=0,status=0,menubar=0,scrollbars=1,resizable=1,width='+mydims[0]+',height='+mydims[1]);
+    var mydims = [320,568];
+    ga('send', 'event', 'button', 'click', 'button', 'launch_'+lang);
+    var win = window.open("www/index.html?seed=284716495&source=hp&language="+($("body").hasClass("en")?"en":"sv"),'targetWindow','toolbar=0,location=0,status=0,menubar=0,scrollbars=1,resizable=1,width='+mydims[0]+',height='+mydims[1]);
     win = win || {};
     win.height = mydims[1];
     win.width = mydims[0];
     e.preventDefault();
-    ga('send', 'event', 'button', 'click', 'button', 'launch_'+lang);
   });
 </script>
 

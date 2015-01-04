@@ -1,0 +1,67 @@
+
+.row:after, .fraction:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+
+.row {
+	float: left;
+}
+
+.row > * {
+	float: left;
+}
+
+.divisor {
+	height: 1px;
+	clear: left;
+	background-color: #000;
+	margin: 2px 0;
+}
+
+.fraction {
+	float: left;
+}
+
+.exponent {
+	top: -5px;
+}
+
+.math {
+	text-align: center;
+}
+
+.math .implicittimes,
+.math .minus,
+.math.useminus .minustermplus, 
+math.useminus .minustermneg {
+	display: none;
+}
+
+.math.showmult .implicittimes {
+	display: block;
+}
+
+.numerator, .denominator {
+	margin: 0 auto;
+}
+
+.math .implicit1st { padding-right: 0; }
+
+.plus {padding: 1px;}
+
+.math .implicit2nd { padding-left: 0; }
+ .math .negated { padding-left: 0 !important;}
+
+.math.showmult .implicit1st, .math.showmult .implicit2nd {
+	padding: 1px 3px;
+}
+
+.fraction, .power, .sum, .product, .number, .concept, .variable, .constant, .negation {
+	padding: 1px 3px;
+	/*border: 1px solid black;*/
+	margin: 0 auto;
+}

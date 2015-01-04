@@ -1,0 +1,308 @@
+textarea
+{
+    -webkit-user-select: auto !important;
+}
+
+.choosebuttons {
+	margin-bottom: 1em;
+}
+
+.demobutton {
+	margin-top: 0.9em;
+}
+
+body {
+	background-color: #fafafa;
+}
+
+body.device *:not(input) {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+#preloader {
+	width: 100px;
+	position: absolute;
+	left: -200px;
+}
+
+.txticon.txtunchecked, .txticon.txtcheck {
+	margin-bottom: 5px;
+	display: inline-block;
+}
+
+
+
+
+.languageselect button {
+	display: block;
+	margin: 8em auto;
+}
+
+.wordmathobj {
+	margin: 1em auto;
+	text-align: center;
+}
+
+.textlist {
+	margin-top: 1em;
+}
+
+.examplelist li {
+	text-align: center;
+	margin-top: 2em;
+	margin-bottom: 2em;
+}
+
+
+
+
+.toollist {
+	list-style-type: none;
+	-webkit-padding-start: 0;
+	padding-left: 0;
+}
+
+
+.group:after {
+	content: ".";
+	display: block;
+	visibility: hidden;
+	height: 0;
+	clear: both;
+}
+
+.historysection {
+	overflow-x: auto;
+}
+
+.examplessection .historysection, .historysection .examplessection {
+	display: none;
+}
+
+.expressionsview .btn-group {
+	text-align: center;
+}
+
+.loader {
+	text-align: center;
+}
+
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { transform: rotate(360deg); transform:rotate(360deg); } }
+
+.loader .clock {
+    -webkit-animation: spin 2s linear infinite;
+    -moz-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+}
+
+
+#PRERENDER {
+	display: none;
+}
+
+math, math[display="block"] {
+	margin-bottom: 0;
+}
+
+
+.centerbox {
+	text-align: center;
+	display: block;
+	margin: 0 auto;
+	margin-bottom: 1em;
+}
+
+
+/***************** bla ********************************/
+
+.largeland { display: none; }
+.large.landscape .largeland { display: inline; }
+
+.large.landscape .nonlargeland { display: none; }
+
+/***************** M I N I    M I S C E L L A N E O U S ********************************/
+
+button.stepbutton, button.decbutton, button.loadingbutton, button.backbutton {
+	margin: 1em auto;
+	display: block;
+}
+
+
+.buttonexample {
+	margin: 0 auto;
+	margin-bottom: 0.8em;
+}
+
+.welcomeheadline {
+	font-weight: bold;
+	font-size: 1.2em;
+}
+
+.mathblock {
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+
+.mathblock .objholder {
+	margin-top: 1em;
+}
+
+.intextlist {
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+
+.intextlist li {
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+
+.phonetext {
+	font-size: 0.8em;
+}
+
+.main .MathJax_Display {
+	margin: 0;
+	overflow: hidden;
+	padding-bottom: 3px;
+	padding-top: 2px;
+}
+
+.historyinstruction {display:none;}
+.emptyhistorytext {display:none;}
+.emptyhistory .emptyhistorytext {display:block;}
+.historyview.emptyhistory .togglebox {display:none;}
+
+.historyview .togglebox.togglesecond .davidlink {
+	background-color: #F8D2D4;
+	border-color: red;
+}
+.historyview .togglebox.togglesecond h5.nav-header {
+	color: red;
+	font-weight: bold;
+}
+
+#hideout, #templates, #mathprerender, #helptexts {display: none;}
+
+.btn-mini > i {
+	margin-top: -1px;
+}
+
+
+div.result {z-index:2;}
+
+
+.wordindex h5 {display:none;}
+
+.errorcontainer {
+	text-align: center;
+	margin-top: 1em;
+}
+
+
+
+
+/************************ C O N T R O L    P A N E L ********************************/
+
+
+
+/*.controlpanel { margin-bottom: 1em; }*/
+/* .large.landscape .controlpanel { float: right; } */
+
+
+/************************ C A L C U L A T O R   M O D E *****************************/
+
+
+
+
+
+
+div.sequence ul.listview > li {
+	margin-bottom: 3.5em;
+}
+
+
+
+
+/************************** L A Y O U T    H E L P E R S ****************************/
+
+.padsides {padding-left: 8px; padding-right:8px;}
+
+
+
+
+/*.sequence {
+	position: relative;
+}*/
+
+.loading .loadprogress, .finishedloading .loadedcontent { 
+	display: block;
+}
+
+.loading .loadedcontent,
+.finishedloading .loadprogress, 
+.hidden {
+	display: none !important;
+}
+
+/*#appendedinputfield { width: 100px; }*/
+
+/*
+.sequencecontainer .backbutton {
+	display: block;
+	margin: 2em auto;
+}*/
+
+.phone-space-top {
+	margin-top: 0.5em;
+}
+
+.clear-both {
+	clear: both;
+}
+
+.largetext {
+	font-size: 1.2em;
+}
+
+.centered {
+	text-align: center;
+}
+
+.centered > * {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.space-right {
+	margin-right: 0.5em;
+}
+
+.space-left {
+	margin-left: 0.5em;
+}
+
+ul.listview {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.listview { margin-left: 0; }
+.listview li { list-style-type: none; }
+
+
+li.nav-header {
+	padding: 3px 15px 3px 30px;
+}
+
+
+.infoholder dd {
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	max-width: 90%;
+	overflow: hidden;
+}
