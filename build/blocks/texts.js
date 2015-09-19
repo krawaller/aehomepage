@@ -12,7 +12,7 @@ exports.texts = {
 		"$APPSTOREHREF": "https://itunes.apple.com/us/app/algebra-explorer/id850375056?mt=8&uo=4",
 		"$FUNCHEADLINE": "Functionality",
 		"$MD_FUNCCONTENT": "\n*    Full algebraic simplification of the expression you enter\n*    Disclosure of every substep in the calculations\n*    Custom parser tailored specifically for the app makes it easy to enter expressions\n*    Decimal representation where applicable\n*    $TYPES different types of expressions supported\n*    $OPERATIONS operations, each with its own in-depth presentation\n*    An integrated vocabulary of $WORDS word definitions\n*    A course of $LESSONS lessons to walk through the contents\n*    Explanatory texts in the app total $TEXTWORDS words, equivalent to a $PAGES page novel!\n",
-		"$IOSHEADLINE": "Buy for iOS",
+		"$IOSHEADLINE": "Get for iOS",
 		"$IOSCONTENT": "You can run the app in your mobile browser for free too, but if you want an offline version for your iOS device, or just want to support the project, you can buy Algebra Explorer in the App Store. The app version is completely identical to the online one."
 	},
 	sv: {
@@ -28,7 +28,7 @@ exports.texts = {
 		"$APPSTOREHREF": "https://itunes.apple.com/se/app/algebra-explorer/id850375056?mt=8&uo=4",
 		"$FUNCHEADLINE": "Funktionalitet",
 		"$MD_FUNCCONTENT": "\n*    Allt innehåll på svenska och engelska\n*    Algebraisk förenkling av uttryck du skriver in\n*    Redovisning av varje delsteg i uträkningarna\n*    Specialbyggd tolkare skräddarsydd för appen gör det enkelt att mata in uttryck\n*    Decimalformsrepresentation\n*    $TYPES olika sorters uttryck stödjs, inklusive logiska uttryck\n*    $OPERATIONS operationer, var och en med ingående presentation\n*    En integrerad ordlista med $WORDS ord\n*    En kurs på $LESSONS lektioner som går igenom allt innehåll\n*    De förklarande texterna uppgår totalt till $TEXTWORDS ord, vilket motsvarar en roman på $PAGES sidor\n",
-		"$IOSHEADLINE": "Köp för iOS",
+		"$IOSHEADLINE": "Hämta till iOS",
 		"$IOSCONTENT": "Du kan köra appen gratis i mobilens webbläsare, men om du vill ha en offline-version till din iOS-enhet eller bara stödja projektet så kan du köpa Algebra Explorer på App Store. Appversionen är helt identisk med onlineversionen här."
 	}
 };
